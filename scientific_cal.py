@@ -1,3 +1,12 @@
+import sys
+import subprocess
+
+# Check if the required packages are installed, and install if they are not
+required_packages = ["streamlit", "numpy", "matplotlib"]
+for package in required_packages:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
